@@ -76,12 +76,7 @@ class Welcome extends CI_Controller
         $post = Post::find($id);
         $users = User::all();
 
-        $jenis = 0;
-        if($post->jenis == 'Berita') $jenis = 0;
-        else if($post->jenis == 'Tutorial') $jenis = 1;
-        else if($post->jenis == 'Blog') $jenis = 2;
-
-        $this->_createView('update', ['post' => $post, 'users' => $users, 'jenis' => $jenis]);
+        $this->_createView('update', ['post' => $post, 'users' => $users]);
     }
 
     public function update($id)

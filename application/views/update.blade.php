@@ -45,7 +45,7 @@
             <!-- radio -->
             <p>Jenis</p>
             <div class="form-check form-check-inline">
-              @if($jenis == 0)
+              @if($post->jenis == "Berita")
                 <input class="form-check-input" type="radio" name="radio" id="flexRadioDefault1" value="Berita" required checked>
               @else
                 <input class="form-check-input" type="radio" name="radio" id="flexRadioDefault1" value="Berita" required>
@@ -55,7 +55,7 @@
               </label>
             </div>
             <div class="form-check form-check-inline">
-              @if($jenis == 1)
+              @if($post->jenis == "Tutorial")
                 <input class="form-check-input" type="radio" name="radio" id="flexRadioDefault1" value="Tutorial" required checked>
               @else
                 <input class="form-check-input" type="radio" name="radio" id="flexRadioDefault1" value="Tutorial" required>
@@ -65,7 +65,7 @@
               </label>
             </div>
             <div class="form-check form-check-inline">
-              @if($jenis == 2)
+              @if($post->jenis == "Blog")
                 <input class="form-check-input" type="radio" name="radio" id="flexRadioDefault1" value="Blog" required checked>
               @else
                 <input class="form-check-input" type="radio" name="radio" id="flexRadioDefault1" value="Blog" required>
