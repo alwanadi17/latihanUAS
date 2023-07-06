@@ -45,19 +45,31 @@
             <!-- radio -->
             <p>Jenis</p>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="radio" id="flexRadioDefault1" value="Berita" required>
+              @if($jenis == 0)
+                <input class="form-check-input" type="radio" name="radio" id="flexRadioDefault1" value="Berita" required checked>
+              @else
+                <input class="form-check-input" type="radio" name="radio" id="flexRadioDefault1" value="Berita" required>
+              @endif
               <label class="form-check-label" for="flexRadioDefault1">
                 Berita
               </label>
             </div>
             <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="radio" id="flexRadioDefault1" value="Tutorial" required>
+              @if($jenis == 1)
+                <input class="form-check-input" type="radio" name="radio" id="flexRadioDefault1" value="Tutorial" required checked>
+              @else
+                <input class="form-check-input" type="radio" name="radio" id="flexRadioDefault1" value="Tutorial" required>
+              @endif
               <label class="form-check-label" for="flexRadioDefault1">
                 Tutorial
               </label>
             </div>
             <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="radio" id="flexRadioDefault1" value="Blog" required>
+              @if($jenis == 2)
+                <input class="form-check-input" type="radio" name="radio" id="flexRadioDefault1" value="Blog" required checked>
+              @else
+                <input class="form-check-input" type="radio" name="radio" id="flexRadioDefault1" value="Blog" required>
+              @endif
               <label class="form-check-label" for="flexRadioDefault1">
                 Blog
               </label>
