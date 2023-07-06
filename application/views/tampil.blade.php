@@ -41,7 +41,9 @@
             <tr>
               <td scope="col">#</td>
               <td scope="col">Username</td>
+              <td scope="col">Email</td>
               <td scope="col">Artikel</td>
+              <td scope="col">Jenis</td>
               <td scope="col">Created at</td>
               <td scope="col">Updated at</td>
               <td scope="col">Action</td>
@@ -52,7 +54,9 @@
             <tr>
               <td scope="row">-</td>
               <td>{{ $post->user->username }}</td>
+              <td>{{ $post->user->email }}</td>
               <td>{{ $post->article }}</td>
+              <td>{{ $post->jenis }}</td>
               <td>{{ $post->created_at }}</td>
               <td>{{ $post->updated_at }}</td>
               <td>

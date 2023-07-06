@@ -50,11 +50,13 @@ class Welcome extends CI_Controller
         if ($this->input->post()){
             $user_id = $this->input->post('user_id');
             $article = $this->input->post('article');
+            $jenis = $this->input->post('radio');
             
             $post = new Post();
     
             $post->user_id = $user_id;
             $post->article = $article;
+            $post->jenis = $jenis;
             $post->save();
         }
 
@@ -73,6 +75,7 @@ class Welcome extends CI_Controller
     {
         $post = Post::find($id);
         $users = User::all();
+        
 
         $this->_createView('update', ['post' => $post, 'users' => $users]);
     }
@@ -82,6 +85,8 @@ class Welcome extends CI_Controller
         $post = Post::find($id);
         $post->user_id = $this->input->post('user_id');
         $post->article = $this->input->post('article');
+        $post->jenis = $this->input->post('radio');
+
         $post->save();
 
         redirect('Welcome/tampil');
